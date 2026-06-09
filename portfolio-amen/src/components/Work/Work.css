@@ -1,0 +1,525 @@
+/* Work Component Styles */
+.work-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #ffffff;
+    padding: 2rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.work-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-number {
+    font-size: 1rem;
+    color: #64ffda;
+    font-family: 'Monaco', 'Courier New', monospace;
+    margin-bottom: 1rem;
+}
+
+.work-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.title-main {
+    background: linear-gradient(135deg, #ffffff 0%, #64ffda 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-accent {
+    color: #64ffda;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.work-subtitle {
+    font-size: 1.2rem;
+    color: #8892b0;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filter Categories */
+.work-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #233554;
+    color: #8892b0;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: 'Monaco', 'Courier New', monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.filter-btn:hover::before {
+    left: 100%;
+}
+
+.filter-btn:hover {
+    border-color: #64ffda;
+    color: #64ffda;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+}
+
+.filter-btn.active {
+    background: rgba(100, 255, 218, 0.1);
+    border-color: #64ffda;
+    color: #64ffda;
+}
+
+.filter-number {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.filter-text {
+    font-size: 1rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.project-card {
+    background: rgba(17, 34, 64, 0.3);
+    border: 1px solid #233554;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    animation: fadeInUp 0.6s ease var(--delay, 0s) both;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #64ffda, #00d4aa);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #64ffda;
+    box-shadow: 0 20px 40px rgba(100, 255, 218, 0.1);
+}
+
+/* Project Image */
+.project-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #233554 0%, #112240 100%);
+}
+
+/* First project (Agency) with background image */
+.project-card:first-child .project-image {
+    position: relative;
+}
+
+.project-card:first-child .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.project-card:first-child .project-overlay {
+    z-index: 2;
+}
+
+/* Second project (GitHub Health) with background image */
+.project-card:nth-child(2) .project-image {
+    position: relative;
+}
+
+.project-card:nth-child(2) .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.project-card:nth-child(2) .project-overlay {
+    z-index: 2;
+}
+
+/* Third project (AI Finance Dashboard) with background image */
+.project-card:nth-child(3) .project-image {
+    position: relative;
+}
+
+.project-card:nth-child(3) .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.project-card:nth-child(3) .project-overlay {
+    z-index: 2;
+}
+
+/* Fourth project (J-IT Tunisia) with background image */
+.project-card:nth-child(4) .project-image {
+    position: relative;
+}
+
+.project-card:nth-child(4) .project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.project-card:nth-child(4) .project-overlay {
+    z-index: 2;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #233554 0%, #112240 100%);
+}
+
+/* When a project-card has an image, hide the placeholder background so the image shows */
+.project-card.has-image .image-placeholder {
+    background: transparent;
+}
+
+.project-card.has-image .project-icon {
+    display: none;
+}
+
+.project-icon {
+    font-size: 3rem;
+    opacity: 0.6;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+    background: #64ffda;
+    color: #112240;
+    transform: translateY(-2px);
+}
+
+/* Project Info */
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ccd6f6;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.project-year {
+    font-size: 0.9rem;
+    color: #64ffda;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.project-description {
+    color: #8892b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-family: 'Monaco', 'Courier New', monospace;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+/* Decorative Elements */
+.project-decorations {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0.3;
+}
+
+.decoration-dot {
+    width: 6px;
+    height: 6px;
+    background: #64ffda;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.decoration-line {
+    width: 30px;
+    height: 1px;
+    background: linear-gradient(90deg, #64ffda, transparent);
+}
+
+/* Footer Section */
+.work-footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid #233554;
+}
+
+.footer-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #64ffda;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.stat-label {
+    color: #8892b0;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.footer-cta {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.footer-cta p {
+    color: #ccd6f6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #64ffda 0%, #00d4aa 100%);
+    border: none;
+    color: #112240;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .work-filters {
+        gap: 1rem;
+    }
+    
+    .footer-stats {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-container {
+        padding: 1rem;
+    }
+    
+    .work-title {
+        font-size: 2.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .work-filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .footer-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-title {
+        font-size: 2rem;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .project-link {
+        justify-content: center;
+    }
+}
