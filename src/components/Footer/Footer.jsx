@@ -35,11 +35,11 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/amen-bejaoui/" className="social-link" target="_blank" rel="noopener noreferrer">
                             <span className="social-text">LinkedIn</span>
                         </a>
-                        {/* Link directly to the uploaded CV (filename contains spaces/parentheses so URL-encoded) */}
-                        <a href="/cv_amen_allah_bejaoui%20(4).pdf" className="social-link" target="_blank" rel="noopener noreferrer">
+                        {/* Link directly to the uploaded CV */}
+                        <a href={`${process.env.PUBLIC_URL}/amen_allah_bejaoui_cv.pdf`} className="social-link" target="_blank" rel="noopener noreferrer">
                             <span className="social-text">CV</span>
                         </a>
-                        <a href="https://github.com/a1m3en" className="social-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/amenallahbejaoui-rgb" className="social-link" target="_blank" rel="noopener noreferrer">
                             <span className="social-text">Github</span>
                         </a>
                     </div>
