@@ -303,7 +303,7 @@ const Work = () => {
                         </button>
                         <img 
                             src={process.env.PUBLIC_URL + galleryImages[currentImageIndex]} 
-                            alt={`Image ${currentImageIndex + 1}`}
+                            alt={`${currentImageIndex + 1}`}
                             className="gallery-image"
                         />
                         <button className="gallery-nav gallery-next" onClick={nextImage}>

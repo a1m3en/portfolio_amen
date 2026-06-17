@@ -116,7 +116,7 @@ const Expertise = () => {
                     
                     <div className="code-line">
                         <span className="line-number">5</span>
-                        <span className="code-comment">// Things I do to get a perfect background image:</span>
+                        <span className="code-comment">Things I do to get a perfect background image:</span>
                     </div>
                     
                     <div className="code-line">
@@ -125,12 +125,12 @@ const Expertise = () => {
                     
                     <div className="code-line">
                         <span className="line-number">7</span>
-                        <span className="code-comment">// Maybe I should stop tinkering with VSCode settings</span>
+                        <span className="code-comment"> Maybe I should stop tinkering with VSCode settings</span>
                     </div>
                     
                     <div className="code-line">
                         <span className="line-number">8</span>
-                        <span className="code-comment">// Just to take a screenshot of this dummy html code.</span>
+                        <span className="code-comment"> Just to take a screenshot of this dummy html code.</span>
                     </div>
                     
                     <div className="code-line">
